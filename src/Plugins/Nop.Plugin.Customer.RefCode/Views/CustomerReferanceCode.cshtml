@@ -1,0 +1,39 @@
+﻿@using Nop.Plugin.Client.ReferanceCode.Models
+@using Nop.Web.Components
+@using Nop.Web.Extensions
+@using Nop.Web.Models.Customer
+@model CustomerReferanceCodeShowModel
+
+@{
+    Layout = "_ColumnsTwo";
+
+    //title
+    NopHtml.AddTitleParts(T("PageTitle.Account").Text);
+    //page class
+    NopHtml.AppendPageCssClassParts("html-account-page");
+    NopHtml.AppendPageCssClassParts("html-reward-points-page");
+}
+@section left
+{
+    @await Component.InvokeAsync(typeof(CustomerNavigationViewComponent))
+}
+
+
+<div class="page account-page reward-points-page">
+    <div class="page-title panel-heading">
+        <h1>@T("Account.MyAccount") - Referans Kodu</h1>
+    </div>
+    <div class="page-body panel-body from-panel">
+        <div class="reward-points-overview">
+            <div class="current-balance alert alert-info">REFERANS KODU</div>
+            @foreach (var code in Model.ReferanceCodes)
+            {
+                <div class="section order-item">
+                    <div class="title">
+                        <strong>Referans Kodunuz: @code.Code</strong>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

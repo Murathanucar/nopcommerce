@@ -1,0 +1,11 @@
+{
+  "Group": "Client",
+  "FriendlyName": "Client Ref Code",
+  "SystemName": "Client.ReferanceCode",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.60" ],
+  "Author": "TechTackle",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Client.ReferanceCode.dll",
+  "Description": "This plugin allows you to use client referance code system on payment."
+}
